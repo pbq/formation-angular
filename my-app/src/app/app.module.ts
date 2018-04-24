@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,9 +21,11 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     CoreModule,
-    HomeModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule.forRoot(),
     SharedModule,
+    HomeModule,
     ItemsModule,
     PageNotFoundModule,
     AppRoutingModule
