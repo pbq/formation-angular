@@ -18,4 +18,10 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  changerEtat(etat: State): void {
+    this.item.state = etat;
+    // transmettre item au parent via output
+    // et laisser au parent la responsabilité de transmettre item a methode pudate de collectionservice
+  }
+
 }

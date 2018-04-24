@@ -5,6 +5,7 @@
     <div class="card-body">
       <h5 class="card-title">Nom: {{ item.name }}</h5>
       <p class="card-text">ref: {{ item.reference }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <button class="btn btn-primary" (click)="changerEtat(state.LIVREE)" *ngIf="state.ENCOURS === item.state">{{ state.LIVREE }}</button>
+      <button class="btn btn-primary" (click)="changerEtat(state.ENCOURS)" *ngIf="state.ALIVRER === item.state">{{ state.ENCOURS }}</button>
     </div>
   </div>
