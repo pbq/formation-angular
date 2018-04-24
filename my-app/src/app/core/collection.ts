@@ -4,7 +4,7 @@ import { State } from '../shared/enums/state.enum';
 export const COLLECTION: Item[] = [
   {
   id: 'a1',
-  name: 'pierre',
+  name: 'Pierre',
   reference : '1234',
   state: State.ALIVRER
 },

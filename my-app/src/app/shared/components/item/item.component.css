@@ -1,0 +1,12 @@
+.state-alivrer{
+  color: rgb(179, 45, 45);
+}
+
+
+.state-encours {
+  color: rgb(32, 32, 134);
+}
+
+.state-livree {
+  color: green;
+}
