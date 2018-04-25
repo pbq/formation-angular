@@ -1,0 +1,23 @@
+<div class="container">
+  <form class="form" novalidate (ngSubmit)="process()" [formGroup]="form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="nom" formControlName="name">
+      <div class="danger alert-danger" *ngIf="isInvalide('name')">champs invalide</div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="reference" formControlName="reference">
+      <div class="danger alert-danger" *ngIf="isInvalide('reference')">champs invalide</div>
+    </div>
+
+    <div class="form-group">
+      <select class="form-control" formControlName="state">
+        <option *ngFor="let lib of libelles" [ngValue]="lib">{{ lib }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Valider</button>
+    </div>
+  </form>
+</div>

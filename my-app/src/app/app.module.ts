@@ -3,32 +3,32 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { AngularFireModule } from 'angularfire2';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { ItemsModule } from './items/items.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { CollectionService } from './core/services/collection.service';
 import { AppRoutingModule } from './app-routing.module';
-import { ItemsRoutingModule } from './items/items-routing.module';
-import { environment } from '../environments/environment';
-
+import { environment } from '../environments/environment.prod';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   imports: [
     BrowserModule,
     CoreModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
     SharedModule,
     HomeModule,
-    ItemsModule,
-    PageNotFoundModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PageNotFoundModule
   ],
   declarations: [
     AppComponent
